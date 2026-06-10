@@ -67,7 +67,7 @@ export default function LandingPage() {
             Start for free
           </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/DheerajRam12262/pulseboard"
             className="rounded-md border border-edge-strong px-6 py-3 text-sm text-ink transition-colors hover:bg-surface-3"
           >
             View source

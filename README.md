@@ -2,7 +2,7 @@
 
 **Real-time project tracking for fast-moving teams** — a Linear/Trello-style kanban app with live multiplayer collaboration, built end-to-end as a production-grade TypeScript monorepo.
 
-![CI](https://github.com/OWNER/pulseboard/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/DheerajRam12262/pulseboard/actions/workflows/ci.yml/badge.svg)
 
 Drag a card on one screen and watch it move on another. PulseBoard keeps every open board in sync over WebSockets: issues, comments, and who's-online presence — no refresh button anywhere.
 
