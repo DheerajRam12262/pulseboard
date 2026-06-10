@@ -1,0 +1,21 @@
+# Render Blueprint — deploys the API as a free-tier web service.
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: pulseboard-api
+    runtime: node
+    plan: free
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @pulseboard/api build
+    startCommand: cd apps/api && node dist/db/migrate.js && node dist/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false # paste your Neon connection string in the dashboard
+      - key: WEB_ORIGIN
+        sync: false # your Vercel URL, e.g. https://pulseboard.vercel.app
